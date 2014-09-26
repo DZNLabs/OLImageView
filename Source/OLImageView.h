@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OLImage.h"
 
 @interface OLImageView : UIImageView
 

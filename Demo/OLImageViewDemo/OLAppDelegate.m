@@ -8,7 +8,6 @@
 
 #import "OLAppDelegate.h"
 #import "OLImageView.h"
-#import "OLImage.h"
 
 @implementation OLAppDelegate
 

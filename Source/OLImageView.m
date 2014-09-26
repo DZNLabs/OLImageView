@@ -7,7 +7,6 @@
 //
 
 #import "OLImageView.h"
-#import "OLImage.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface OLImageView ()

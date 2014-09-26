@@ -6,9 +6,10 @@
 //  Copyright (c) 2012 Onda. All rights reserved.
 //
 
+#import "OLImage.h"
+
 #import <ImageIO/ImageIO.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#import "OLImage.h"
 
 //Define FLT_EPSILON because, reasons.
 //Actually, I don't know why but it seems under certain circumstances it is not defined
