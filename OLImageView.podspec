@@ -1,4 +1,4 @@
-@version = "1.4"
+@version = "1.4.0.b"
 
 Pod::Spec.new do |s|
   s.name         = "OLImageView"
