@@ -12,19 +12,19 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Core'
 
   s.subspec 'Core' do |core|
-    core.source_files = 'OLImage.{h,m}', 'OLImageView.{h,m}'
+    core.source_files = 'Source/OLImage.{h,m}', 'Source/OLImageView.{h,m}'
   end
 
-  s.subspec 'AFNetworking' do |af|
-    af.dependency 'OLImageView/Core'
-    af.dependency 'AFNetworking', '~> 1.0'
-    af.source_files = "Categories/AFImageRequestOperation+OLImage.{h,m}"
+  s.subspec 'AFNetworking1' do |af1|
+    af1.dependency 'OLImageView/Core'
+    af1.dependency 'AFNetworking', '~> 1.0'
+    af1.source_files = "Source/AFNetworking1/OL*.{h,m}"
   end
 
-  s.subspec 'AFNetworking2' do |ss|
+  s.subspec 'AFNetworking2' do |af2|
     s.platform = :ios, '6.0'
-    ss.dependency 'OLImageView/Core'
-    ss.dependency 'AFNetworking', '~> 2.0'
-    ss.source_files = "AFNetworking/OL*.{h,m}"
+    af2.dependency 'OLImageView/Core'
+    af2.dependency 'AFNetworking', '~> 2.0'
+    af2.source_files = "Source/AFNetworking2/OL*.{h,m}"
   end
 end
