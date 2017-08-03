@@ -298,10 +298,6 @@ inline static BOOL isRetinaFilePath(NSString *path)
     free(_frameDurations);
 }
 
-@end
-
-@implementation OLImage (IncrementalData)
-
 + (instancetype)imageWithIncrementalData:(NSData *)data
 {
     OLImage *image = [[OLImage alloc] init];
@@ -311,7 +307,7 @@ inline static BOOL isRetinaFilePath(NSString *path)
     image.incrementalSource = incrementalSource;
     image.totalDuration = 0;
     image.frameDurations = calloc(1, sizeof(NSTimeInterval));
-    
+
     CFRelease(incrementalSource);
     if (data) {
         [image updateWithData:data];
@@ -329,7 +325,7 @@ inline static BOOL isRetinaFilePath(NSString *path)
     if (![self isPartial]) {
         return;
     }
-    
+
 
     CGImageSourceUpdateData(_incrementalSource, (__bridge CFDataRef)([data copy]), final);
     [self.imageSourceArray updateCount];
@@ -350,7 +346,7 @@ inline static BOOL isRetinaFilePath(NSString *path)
         durations[i] = delay;
         totalDuration += delay;
     }
-    
+
     free(_frameDurations);
     _frameDurations = durations;
     self.totalDuration = totalDuration;

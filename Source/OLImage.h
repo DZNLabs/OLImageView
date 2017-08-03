@@ -31,17 +31,13 @@
  */
 @property (nonatomic, readonly) NSUInteger loopCount;
 
-@end
-
-
 ///----------------------------
 /// @name Partial Image Methods
 ///----------------------------
 
-@interface OLImage (IncrementalData)
 /**
  Creates and returns an image object with the Incremental Data processed
- 
+
  @param data The image data. This can be partial data or `nil`
  @return A new image object with the specified data or partial container if none was provided.
  */
@@ -49,7 +45,7 @@
 
 /**
  Update the image instance with new data
- 
+
  @param data The image data. This can be partial data.
  This calls `updateWithData:final:` with `NO` as the `finalize` argument.
  */
@@ -57,7 +53,7 @@
 
 /**
  Update the image instance with new data
- 
+
  @param data The image data. This can be partial data.
  @param finalize `YES` if this the data provided is complete
  */
